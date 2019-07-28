@@ -69,7 +69,15 @@ function returnFnResult(fn) {
    console.log(f()); // выведет 12
    console.log(f()); // выведет 13
  */
-function returnCounter(number) {}
+function returnCounter(number) {
+    function F() {
+        let iNumber = number + 1;
+      
+        return number = iNumber;
+    }
+  
+    return F;
+}
 
 /*
  Задание 5 *:
