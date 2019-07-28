@@ -31,6 +31,14 @@ function returnFirstArgument(a) {
    sumWithDefaults(10) вернет 110
  */
 function sumWithDefaults(a, b) {
+  function fn() {
+    var result = a + b;
+      if (result = a) {
+        result = a + 100;
+      }
+    return result; 
+  }
+ return fn(); 
 }
 
 /*
