@@ -32,11 +32,12 @@ function returnFirstArgument(a) {
  */
 function sumWithDefaults(a, b) {
   function fn() {
-    var result = a + b;
+    var result = a+b;
       if (result = a) {
-        result = a + 100;
-      }
-    return result; 
+        return result + 100;
+      } else {
+        return a + b;
+      } 
   }
  return fn(); 
 }
