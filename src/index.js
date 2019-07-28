@@ -50,7 +50,11 @@ function sumWithDefaults(a, b) {
  Пример:
    returnFnResult(() => 'привет') вернет 'привет'
  */
-function returnFnResult(fn) {}
+function returnFnResult(fn) {
+    var result = fn();
+
+    return fn(result);
+}
 
 /*
  Задание 4:
