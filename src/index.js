@@ -31,8 +31,6 @@ function returnFirstArgument(a) {
    sumWithDefaults(10) вернет 110
  */
 function sumWithDefaults(a, b) {
-    var sum = a + b;
-
     if (b === undefined) {
         var result = a + 100;
     } else {
