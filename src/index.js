@@ -69,6 +69,9 @@ function returnFnResult(fn) {
  */
 function returnCounter(number) {
     function F() {
+      if (number == undefined) {
+          number = 0;
+      }
         let iNumber = number + 1;
       
         return number = iNumber;
