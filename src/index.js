@@ -7,6 +7,12 @@
  Посмотрите как работает forEach и повторите это поведение для массива, который будет передан в параметре array
  */
 function forEach(array, fn) {
+    var i, length = array.length;
+    for (let i = 0; i < length; i++) {
+      fn(array[i], i, array);
+      
+    }
+      
 }
 
 /*
