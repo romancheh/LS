@@ -39,17 +39,17 @@ function map(array, fn) {
  */
 function reduce(array, fn, initial) {
     var length = array.length;
-    var prevItem = initial;
+    var prev = initial;
 
     for (let i = 0; i < length; i++) {
-        if (prevItem === undefined) {
-            prevItem = array[i];
+        if (prev === undefined) {
+            prev = array[0];
         } else {
-            prevItem = fn(prevItem, array[i], i, array);
+            prev = fn(prev, array[i], i, array);
         }
     }
     
-    return prevItem;
+    return prev;
 }
 
 /*
@@ -61,6 +61,18 @@ function reduce(array, fn, initial) {
    upperProps({ name: 'Сергей', lastName: 'Петров' }) вернет ['NAME', 'LASTNAME']
  */
 function upperProps(obj) {
+    var resArr = [];
+    var resultArray = [];
+    var resArr = Object.keys(obj);    
+    var result = '';
+
+    for (let i = 0; i < resArr.length; i++) {
+        result = resArr[i];
+        result = result.toUpperCase();
+        resultArray.push(result);
+    }
+
+    return resultArray;
 }
 
 /*
